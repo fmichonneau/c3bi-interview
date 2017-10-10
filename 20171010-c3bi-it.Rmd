@@ -145,7 +145,6 @@ class: inverse, center, middle
 * Skills:
   - data wrangling and cleaning
   - geospatial analysis
-  - 
 
 ---
 class: inverse, middle, center
