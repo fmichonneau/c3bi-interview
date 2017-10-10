@@ -163,11 +163,13 @@ Target mtDNA COI (5 million DNA sequences available) but <20% of fauna barcoded
 
 ---
 
-## How to identify species without a match in database?
+## Metabarcoding
 
-### Develop new tools based on COI protein sequence
+### How to identify species without a match in database?
 
-> increase accuracy of assignment
+#### Develop new tools based on COI protein sequence
+
+> increase accuracy of taxonomic assignment
 
 ---
 class: middle, center, inverse
