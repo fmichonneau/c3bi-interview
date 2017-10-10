@@ -62,7 +62,7 @@ head(geospiza, n = 4)
 # R package: `rncl`
 
 * Wrapper around the NEXUS Class Library
-* Robust parsing of NEXUS and Newick files
+* Robust parsing of NEXUS and Newick phylogenetic tree files
 
 # R package: `cipresr`
 
@@ -79,16 +79,16 @@ library(rotl)
 taxa <- tnrs_match_names(names =
             c("Chlamydomonas reinhardtii",
               "Drosophila melanogaster", "Arabidopsis thaliana",
-               "Rattus norvegicus", "Mus musculus",
-               "Cavia porcellus", "Xenopus laevis",
-               "Saccharomyces cervisae", "Danio rerio"))
+              "Rattus norvegicus", "Mus musculus",
+              "Cavia porcellus", "Xenopus laevis",
+              "Saccharomyces cervisae", "Danio rerio"))
 tr <- tol_induced_subtree(ott_id(taxa))
 ```
 
 ---
 # R package: `rotl`
 
-```{r}
+```{r rotl-tree}
 plot(tr)
 ```
 
