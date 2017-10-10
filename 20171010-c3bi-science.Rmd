@@ -27,25 +27,21 @@ output:
 
 ### Experienced Instructor
 
-> The next generation of scientists needs fluency in their understanding of
+> The next generation of scientists needs to be fluent in their understanding of
 > computational tools.
 
 
 ---
 class: inverse, middle
 
-## 
+## Outline
 
-#### > Establishing new baseline for marine biodiversity knowledge with modern technologies
+#### 1. Species diversity and species limits in sea cucumbers
 
-<!-- we can speed up greatly how much we study and use technology to identify interesting problems -->
+#### 2. Identifying and filling knowledge gaps in marine biodiversity
 
-#### > How can we speed up the documentation of biodiversity?
-
-<!-- many basic questions: how many species? where do species live? can we tell them apart? very difficult to answer -->
 
 ---
-
 class: inverse, center, middle
 
 # Species diversity and species limits in sea cucumbers
@@ -118,7 +114,7 @@ background-size: cover
 ---
 class: inverse, center, middle
 
-# Accelerating Biodiversity Documentation
+# Identifying and filling knowledge gaps in marine biodiversity
 
 ---
 
@@ -169,7 +165,7 @@ Target mtDNA COI (5 million DNA sequences available) but <20% of fauna barcoded
 
 ## How to identify species without a match in database?
 
-### Develop new tools based on protein sequence
+### Develop new tools based on COI protein sequence
 
 > increase accuracy of assignment
 
