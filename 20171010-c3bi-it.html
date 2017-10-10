@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>C3BI interview</title>
+    <meta charset="utf-8">
+    <meta name="author" content="François Michonneau,   Postdoctoral Researcher, University of Florida" />
+    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
+    <link rel="stylesheet" href="my-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# C3BI interview
+## IT Committee
+### François Michonneau, <br> Postdoctoral Researcher, University of Florida
+### October 10th, 2017
+
+---
+
+
+
+# Who am I?
+
+### Evolutionary Biologist and Biodiversity Scientist
+
+&gt; Computational tools can help us identify knowledge gaps, refine our research
+&gt; questions, and improve our understanding of the natural world.
+
+### Reproducible Research Enthusiast and Advocate
+
+&gt; Computational tools can help us make our science more robust.
+
+### Experienced Instructor
+
+&gt; The next generation of scientists needs fluency in their understanding of
+&gt; computational tools.
+
+
+---
+# General principles
+
+* Use version control
+* Unit testing, continuous integration, code coverage
+* Keep the end-user in mind
+* Code review whenever possible
+
+
+---
+class: inverse, middle
+
+## R packages
+
+for phylogenetic data
+
+---
+# `phylobase`
+
+* Data structure for comparative methods
+* Tree and associated data in a single object
+
+
+```r
+library(phylobase)
+head(geospiza)
+```
+
+```
+##           label node ancestor edge.length node.type    wingL  tarsusL
+## 1    fuliginosa    1       24     0.05500       tip 4.132957 2.806514
+## 2        fortis    2       24     0.05500       tip 4.244008 2.894717
+## 3  magnirostris    3       23     0.11000       tip 4.404200 3.038950
+## 4   conirostris    4       22     0.18333       tip 4.349867 2.984200
+## 5      scandens    5       21     0.19250       tip 4.261222 2.929033
+## 6    difficilis    6       20     0.22800       tip 4.224067 2.898917
+## 7       pallida    7       25     0.08667       tip 4.265425 3.089450
+## 8      parvulus    8       27     0.02000       tip 4.131600 2.973060
+## 9    psittacula    9       27     0.02000       tip 4.235020 3.049120
+## 10       pauper   10       26     0.03500       tip 4.232500 3.035900
+##     culmenL    beakD   gonysW
+## 1  2.094971 1.941157 1.845379
+## 2  2.407025 2.362658 2.221867
+## 3  2.724667 2.823767 2.675983
+## 4  2.654400 2.513800 2.360167
+## 5  2.621789 2.144700 2.036944
+## 6  2.277183 2.011100 1.929983
+## 7  2.430250 2.016350 1.949125
+## 8  1.974420 1.873540 1.813340
+## 9  2.259640 2.230040 2.073940
+## 10 2.187000 2.073400 1.962100
+##  [ reached getOption("max.print") -- omitted 10 rows ]
+```
+
+---
+# `rncl`
+
+* Wrapper around the NEXUS Class Library
+* Robust parsing of NEXUS and Newick files
+
+---
+# `rotl`
+
+* Use the Open Tree of Life API
+* Link with other R packages for phylogenetic data
+
+
+```r
+library(rotl)
+taxa &lt;- tnrs_match_names(names =
+            c("Chlamydomonas reinhardtii",
+              "Drosophila melanogaster", "Arabidopsis thaliana",
+               "Rattus norvegicus", "Mus musculus",
+               "Cavia porcellus", "Xenopus laevis",
+               "Saccharomyces cervisae", "Danio rerio"))
+tr &lt;- tol_induced_subtree(ott_id(taxa))
+```
+
+---
+# `rotl`
+
+
+```r
+plot(tr)
+```
+
+![](20171010-c3bi-it_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+class: inverse, middle, center
+
+# A shiny app for planktonic larvae
+
+---
+# A shiny app for planktonic larvae
+
+* organization of photo, collection events, and taxonomic information
+* &lt;http://plankton-atlas.net&gt;
+
+![](img/plankton-atlas.png)
+
+---
+# A shiny app for planktonic larvae
+
+* Docker image with R, shiny, and all other packages needed
+* Hosted on Digital Ocean
+* Fully deployed from within R
+
+
+---
+class: inverse, center, middle
+
+# The State of Knowledge of Marine Invertebrate Biodiversity in the US
+
+---
+
+## What do we know about marine biodiversity in the US?
+
+* Analyze 3+ million occurrence records from biodiversity databases
+* First data synthesis on marine invertebrates at this scale
+* Fully reproducible analysis (using `remake` package)
+
+&lt;img src="img/map_diversity_usa.png" width="1200"&gt;
+
+---
+
+## What do we know about marine biodiversity in the US?
+
+* API calls are cached (using the `storr` package)
+* Raw records are assembled in Postgres database
+* Manuscript written in Rmarkdown
+* Project avaialble at: https://github.com/fmichonneau/sok-marine-biodiversity/
+
+---
+class: inverse, middle, center
+
+# Computing training
+
+---
+# Programming for Biologists Using R
+
+* Semester-long course for PhD students (and postdocs) in Biology (taught in
+  Spring 2015)
+* https://r-bio.github.io
+
+---
+# Data and Software Carpentry
+
+* 14 workshops: USA, Caribbean, Europe
+* Introductory computing skills to a broad audience
+* Certified instructor and instructor trainer
+
+
+---
+class: inverse, middle, center
+
+# Questions
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

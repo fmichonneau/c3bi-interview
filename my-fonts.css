@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+  font-family: 'Ubuntu';
+  font-weight: normal;
+}
+
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: normal;
+}
+
+img {
+    max-height: 65%;
+}

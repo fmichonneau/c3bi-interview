@@ -1,0 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+h1, h2, h3 {
+  font-family: 'Ubuntu';
+  font-weight: normal;
+}

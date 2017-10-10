@@ -1,0 +1,180 @@
+---
+title: "C3BI interview"
+subtitle: "Scientific Committee"
+author: "François Michonneau, <br> Postdoctoral Researcher, University of Florida"
+date: "October 10th, 2017"
+output:
+  xaringan::moon_reader:
+    css: [default, my-fonts.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+# Who am I?
+
+### Evolutionary Biologist and Biodiversity Scientist
+
+> Computational tools can help us identify knowledge gaps, refine our research
+> questions, and improve our understanding of the natural world.
+
+### Reproducible Research Enthusiast and Advocate
+
+> Computational tools can help us make our science more robust.
+
+### Experienced Instructor
+
+> The next generation of scientists needs fluency in their understanding of
+> computational tools.
+
+
+---
+class: inverse, middle
+
+## 
+
+#### > Establishing new baseline for marine biodiversity knowledge with modern technologies
+
+<!-- we can speed up greatly how much we study and use technology to identify interesting problems -->
+
+#### > How can we speed up the documentation of biodiversity?
+
+<!-- many basic questions: how many species? where do species live? can we tell them apart? very difficult to answer -->
+
+---
+
+class: inverse, center, middle
+
+# Species diversity and species limits in sea cucumbers
+
+---
+
+
+# Species limits
+
+.pull-left[
+<img src="img/bird_paradise.gif" width="300">
+<img src="img/bird_paradise_2.gif" width="300">
+]
+
+
+.pull-right[
+<img src="img/peacock.gif" width="300">
+<img src="img/boobies.gif" width="300">
+]
+
+---
+class: inverse
+background-color: black
+
+# Species limits
+
+<img src="img/external_fertilization.png">
+
+---
+
+# Species limits
+
+<img src="img/museumbirds.jpg">
+
+---
+
+# Species limits
+
+<img src="img/museumcukes.jpg">
+
+---
+background-image: url(img/cuke_taxonomy.png)
+background-size: cover
+
+
+---
+background-image: url(img/industry.png)
+background-size: cover
+
+---
+background-image: url(img/industry2.png)
+background-size: cover
+
+---
+background-image: url(img/map_sampling.png)
+background-size: cover
+
+---
+background-image: url(img/summary_barcoding.png)
+background-size: cover
+
+---
+background-image: url(img/impatiens1.png)
+background-size: cover
+
+---
+background-image: url(img/impatiens2.png)
+background-size: cover
+
+---
+class: inverse, center, middle
+
+# Accelerating Biodiversity Documentation
+
+---
+
+## What do we know about marine biodiversity in the US?
+
+* Analyze 3+ million occurrence records from biodiversity databases
+* First data synthesis on marine invertebrates at this scale
+
+<img src="img/map_diversity_usa.png" width="1200">
+
+---
+
+## Correlation between number of records and number of species
+
+<img src="img/correlation_sampling.png" width="600">
+
+
+---
+
+## Newly recorded species track number of samples collected
+
+<img src="img/correlation_diversity.png">
+
+
+---
+
+## Metabarcoding, a promising approach
+
+.center[<img src="img/metabarcoding.png" width="600">]
+
+---
+
+## DNA barcoding
+
+.center[<img src="img/barcoding.png" width="600">]
+
+
+---
+
+## Metabarcoding
+
+Target mtDNA COI (5 million DNA sequences available) but <20% of fauna barcoded
+
+<img src="img/prop_barcoded.png" width="600">
+
+
+---
+
+## How to identify species without a match in database?
+
+### Develop new tools based on protein sequence
+
+> increase accuracy of assignment
+
+---
+class: middle, center, inverse
+
+# Questions
+
