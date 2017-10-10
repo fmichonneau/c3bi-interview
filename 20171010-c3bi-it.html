@@ -38,7 +38,7 @@ class: center, middle, inverse, title-slide
 
 
 ---
-# General principles
+# General coding principles
 
 * Use version control
 * Unit testing, continuous integration, code coverage
@@ -54,7 +54,7 @@ class: inverse, middle
 for phylogenetic data
 
 ---
-# `phylobase`
+# R package: `phylobase`
 
 * Data structure for comparative methods
 * Tree and associated data in a single object
@@ -62,43 +62,34 @@ for phylogenetic data
 
 ```r
 library(phylobase)
-head(geospiza)
+head(geospiza, n = 4)
 ```
 
 ```
-##           label node ancestor edge.length node.type    wingL  tarsusL
-## 1    fuliginosa    1       24     0.05500       tip 4.132957 2.806514
-## 2        fortis    2       24     0.05500       tip 4.244008 2.894717
-## 3  magnirostris    3       23     0.11000       tip 4.404200 3.038950
-## 4   conirostris    4       22     0.18333       tip 4.349867 2.984200
-## 5      scandens    5       21     0.19250       tip 4.261222 2.929033
-## 6    difficilis    6       20     0.22800       tip 4.224067 2.898917
-## 7       pallida    7       25     0.08667       tip 4.265425 3.089450
-## 8      parvulus    8       27     0.02000       tip 4.131600 2.973060
-## 9    psittacula    9       27     0.02000       tip 4.235020 3.049120
-## 10       pauper   10       26     0.03500       tip 4.232500 3.035900
-##     culmenL    beakD   gonysW
-## 1  2.094971 1.941157 1.845379
-## 2  2.407025 2.362658 2.221867
-## 3  2.724667 2.823767 2.675983
-## 4  2.654400 2.513800 2.360167
-## 5  2.621789 2.144700 2.036944
-## 6  2.277183 2.011100 1.929983
-## 7  2.430250 2.016350 1.949125
-## 8  1.974420 1.873540 1.813340
-## 9  2.259640 2.230040 2.073940
-## 10 2.187000 2.073400 1.962100
-##  [ reached getOption("max.print") -- omitted 10 rows ]
+##          label node ancestor edge.length node.type    wingL  tarsusL
+## 1   fuliginosa    1       24     0.05500       tip 4.132957 2.806514
+## 2       fortis    2       24     0.05500       tip 4.244008 2.894717
+## 3 magnirostris    3       23     0.11000       tip 4.404200 3.038950
+## 4  conirostris    4       22     0.18333       tip 4.349867 2.984200
+##    culmenL    beakD   gonysW
+## 1 2.094971 1.941157 1.845379
+## 2 2.407025 2.362658 2.221867
+## 3 2.724667 2.823767 2.675983
+## 4 2.654400 2.513800 2.360167
 ```
 
 ---
-# `rncl`
+# R package: `rncl`
 
 * Wrapper around the NEXUS Class Library
 * Robust parsing of NEXUS and Newick files
 
+# R package: `cipresr`
+
+* Send data and parameters to CIPRES Science Gateway for phylogenetic analysis
+
 ---
-# `rotl`
+# R package: `rotl`
 
 * Use the Open Tree of Life API
 * Link with other R packages for phylogenetic data
@@ -116,7 +107,7 @@ tr &lt;- tol_induced_subtree(ott_id(taxa))
 ```
 
 ---
-# `rotl`
+# R package: `rotl`
 
 
 ```r
@@ -145,6 +136,12 @@ class: inverse, middle, center
 * Hosted on Digital Ocean
 * Fully deployed from within R
 
+--
+
+### In progress
+
+* Pipeline and tools to improve taxonommic assignments from metabarcoding runs
+  from plankton tows.
 
 ---
 class: inverse, center, middle
@@ -165,10 +162,14 @@ class: inverse, center, middle
 
 ## What do we know about marine biodiversity in the US?
 
-* API calls are cached (using the `storr` package)
-* Raw records are assembled in Postgres database
+* Results from API calls are cached (using the `storr` package)
+* Raw records are assembled into a PostgreSQL database
 * Manuscript written in Rmarkdown
 * Project avaialble at: https://github.com/fmichonneau/sok-marine-biodiversity/
+* Skills:
+  - data wrangling and cleaning
+  - geospatial analysis
+  - 
 
 ---
 class: inverse, middle, center
@@ -182,7 +183,8 @@ class: inverse, middle, center
   Spring 2015)
 * https://r-bio.github.io
 
----
+--
+
 # Data and Software Carpentry
 
 * 14 workshops: USA, Caribbean, Europe

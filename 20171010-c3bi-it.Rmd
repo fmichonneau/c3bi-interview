@@ -32,7 +32,7 @@ output:
 
 
 ---
-# General principles
+# General coding principles
 
 * Use version control
 * Unit testing, continuous integration, code coverage
@@ -48,24 +48,28 @@ class: inverse, middle
 for phylogenetic data
 
 ---
-# `phylobase`
+# R package: `phylobase`
 
 * Data structure for comparative methods
 * Tree and associated data in a single object
 
 ```{r}
 library(phylobase)
-head(geospiza)
+head(geospiza, n = 4)
 ```
 
 ---
-# `rncl`
+# R package: `rncl`
 
 * Wrapper around the NEXUS Class Library
 * Robust parsing of NEXUS and Newick files
 
+# R package: `cipresr`
+
+* Send data and parameters to CIPRES Science Gateway for phylogenetic analysis
+
 ---
-# `rotl`
+# R package: `rotl`
 
 * Use the Open Tree of Life API
 * Link with other R packages for phylogenetic data
@@ -82,7 +86,7 @@ tr <- tol_induced_subtree(ott_id(taxa))
 ```
 
 ---
-# `rotl`
+# R package: `rotl`
 
 ```{r}
 plot(tr)
@@ -108,6 +112,12 @@ class: inverse, middle, center
 * Hosted on Digital Ocean
 * Fully deployed from within R
 
+--
+
+### In progress
+
+* Pipeline and tools to improve taxonommic assignments from metabarcoding runs
+  from plankton tows.
 
 ---
 class: inverse, center, middle
@@ -128,10 +138,14 @@ class: inverse, center, middle
 
 ## What do we know about marine biodiversity in the US?
 
-* API calls are cached (using the `storr` package)
-* Raw records are assembled in Postgres database
+* Results from API calls are cached (using the `storr` package)
+* Raw records are assembled into a PostgreSQL database
 * Manuscript written in Rmarkdown
 * Project avaialble at: https://github.com/fmichonneau/sok-marine-biodiversity/
+* Skills:
+  - data wrangling and cleaning
+  - geospatial analysis
+  - 
 
 ---
 class: inverse, middle, center
@@ -145,7 +159,8 @@ class: inverse, middle, center
   Spring 2015)
 * https://r-bio.github.io
 
----
+--
+
 # Data and Software Carpentry
 
 * 14 workshops: USA, Caribbean, Europe
